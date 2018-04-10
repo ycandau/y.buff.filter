@@ -72,7 +72,7 @@ int C74_EXPORT main(void)
 {
   t_class *c;
   
-  c = class_new("buff.filter~", (method)buff_filter_new, (method)buff_filter_free, 
+  c = class_new("y.buff.filter~", (method)buff_filter_new, (method)buff_filter_free, 
     (long)sizeof(t_buff_filter), 0L /* leave NULL!! */, A_GIMME, 0);
   
   class_addmethod(c, (method)buff_filter_assist, "assist", A_CANT, 0);
