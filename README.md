@@ -1,4 +1,4 @@
-# buff.filter
+# y.buff.filter
 
 > A Max external to filter a buffer through a bank of biquads (offline filtering).
 
