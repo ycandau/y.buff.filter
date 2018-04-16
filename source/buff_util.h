@@ -8,8 +8,8 @@
 
 // ====  TYPEDEF ENUM AND STRUCT  ====
 
-typedef enum
-{
+typedef enum {
+
   BUFF_NO_LINK,   // Buffer has not been linked to
   BUFF_NO_SYM,    // Failed to get a symbol for the buffer
   BUFF_NO_REF,    // Failed to get a reference for the buffer
@@ -19,11 +19,11 @@ typedef enum
 
 } t_buff_state;
 
-typedef struct _buff_info
-{
-  t_symbol     *sym;   // Name
-  t_buffer_ref *ref;   // Buffer reference
-  t_buffer_obj *obj;   // Buffer object
+typedef struct _buff_info {
+
+  t_symbol*     sym;   // Name
+  t_buffer_ref* ref;   // Buffer reference
+  t_buffer_obj* obj;   // Buffer object
 
   t_uint8   ch_cnt;   // Number of channels
   t_uint32  fr_cnt;   // Length in frames
@@ -37,12 +37,12 @@ typedef struct _buff_info
 
 // ====  PROCEDURE DECLARATIONS  ====
 
-t_buff_info *buff_new       ();
-void         buff_free      (t_buff_info *buff);
-void         buff_reset     (t_buff_info *buff);
-void         buff_get_obj   (void *x, t_buff_info *buff, t_symbol *buff_sym);
-void         buff_get_param (t_buff_info *buff);
-void         buff_post      (void *x, t_buff_info *buff);
+t_buff_info* buff_new       ();
+void         buff_free      (t_buff_info* buff);
+void         buff_reset     (t_buff_info* buff);
+void         buff_get_obj   (void* x, t_buff_info* buff, t_symbol* buff_sym);
+void         buff_get_param (t_buff_info* buff);
+void         buff_post      (void* x, t_buff_info* buff);
 
 // ========  END OF HEADER FILE  ========
 
